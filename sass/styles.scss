@@ -1,7 +1,8 @@
 /* =============================================================================
     CSS Animations & Transitions demo // Gainesville Front End Developer Meetup
     Live Demo Presented by Mike Herchel 2/20/2014
-    transition: <property> <duration> <timing-function> <delay>;
+    http://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/161112672/
+    https://github.com/mherchel/css-animation-transition-demo
    ========================================================================== */
 
 @import 'compass/css3';
@@ -14,17 +15,12 @@
 
 body {
   background: beige;
-  font-family: georgia;
+  font-family: "arial narrow", helvetica;
 }
 
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
-}
-
-h1, h2 {
-  font-family: "arial narrow", helvetica;
-  color: lightslategrey;
 }
 
 div {
@@ -34,6 +30,7 @@ div {
   border: solid 2px #333;
   padding: 10px;
   color: white;
+  margin: 1em;
 }
 
 // Basic CSS Transitions to mess with
@@ -51,5 +48,28 @@ div {
   &:hover {
     background-color: orange;
   }
-  &.js-scroll-down
+  &.js-scroll-down {
+    // insert something cool
+  }
+}
+
+// Some animation elements
+
+.css-animation-1 {
+  display: none;
+  background-color: green;
+  animation: basic 2s infinite;
+  -webkit-animation: basic 2s infinite;
+}
+
+@keyframes basic {
+  0%    {background: green;}
+  50%   {background: yellow;}
+  100%  {background: green;}
+}
+
+@-webkit-keyframes basic {
+  0%    {background: green;}
+  50%   {background: yellow;}
+  100%  {background: green;}
 }
